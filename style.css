@@ -1,0 +1,154 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #1a2a6c, #2a3e84, #1e3c72);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+nav button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+nav button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav button.active {
+    background-color: #4a69bd;
+    box-shadow: 0 0 10px rgba(74, 105, 189, 0.5);
+}
+
+.calculator {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 40px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.number, .decimal {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.operator, .function {
+    background-color: #4a69bd;
+    color: #fff;
+}
+
+.equals {
+    background-color: #6a89cc;
+    color: #fff;
+}
+
+.clear, .sign, .percent {
+    background-color: #e58e26;
+    color: #fff;
+}
+
+.scientific .buttons {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.scientific button {
+    font-size: 20px;
+}
+
+.backspace {
+    background-color: #e58e26;
+    color: #fff;
+}
+
+.number.zero {
+    grid-column: span 2;
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 24px;
+}
+
+.scientific .number.zero {
+    grid-column: span 1;
+    border-radius: 50%;
+    text-align: center;
+    padding-left: 0;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 28px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons a:first-child:hover {
+    color: #1877f2; /* Facebook blue */
+}
+
+.social-icons a:last-child:hover {
+    color: #00ff00; /* Bright green for website */
+}
